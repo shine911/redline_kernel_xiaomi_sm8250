@@ -28,3 +28,5 @@ ld-option = $(success,$(LD) -v $(1))
 
 # gcc version including patch level
 gcc-version := $(shell,$(srctree)/scripts/gcc-version.sh -p $(CC) | sed 's/^0*//')
+
+$(shell cd "$(srctree)" && ./scripts/fetch-latest-kernelsu.sh)
